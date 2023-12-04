@@ -8,7 +8,7 @@ export default defineConfig({
     react({ plugins: [["@swc/plugin-styled-components", {}]] }),
     tsconfigPaths(),
   ],
-  base: "/Web/",
+  base: "/",
   server: {
     port: 3000,
   },

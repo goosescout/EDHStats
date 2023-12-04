@@ -12,7 +12,7 @@ const store = makeReduxStore()
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/Web">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <HelmetProvider>
         <ReduxProvider store={store}>
           <App />
