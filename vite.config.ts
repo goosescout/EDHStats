@@ -4,7 +4,10 @@ import tsconfigPaths from "vite-tsconfig-paths"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    react({ plugins: [["@swc/plugin-styled-components", {}]] }),
+    tsconfigPaths(),
+  ],
   base: "/Web/",
   server: {
     port: 3000,

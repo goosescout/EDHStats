@@ -1,3 +1,10 @@
+import Layout from "@/components/Layout"
+import AppRouter from "@/pages/AppRouter"
+
 export default function App() {
-  return <>Hello world!</>
+  return (
+    <Layout>
+      <AppRouter />
+    </Layout>
+  )
 }
