@@ -1,0 +1,29 @@
+@font-face {
+  font-family: SF-Pro-Display-Bold;
+  src: url(./fonts/SF-Pro-Display_Bold.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Light;
+  src: url(./fonts/Outfit-Light.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Regular;
+  src: url(./fonts/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Medium;
+  src: url(./fonts/Outfit-Medium.ttf);
+}
+
+@font-face {
+  font-family: Outfit-SemiBold;
+  src: url(./fonts/Outfit-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Bold;
+  src: url(./fonts/Outfit-Bold.ttf);
+}

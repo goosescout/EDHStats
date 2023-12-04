@@ -5,18 +5,17 @@ module.exports = {
     es2020: true
   },
   extends: [
-    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:import/typescript",
-    "eslint:recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh", "react", "@typescript-eslint", "import"],
   rules: {
+    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "camelcase": [
       "error",

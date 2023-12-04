@@ -4,7 +4,8 @@ export default function AppRouter() {
   return (
     <Routes>
       <Route index Component={() => <>Hello world!</>} />
-      <Route path="/test" Component={() => <>Test</>} />
+      <Route path="/commanders" Component={() => <>Commanders</>} />
+      <Route path="/card-choices" Component={() => <>Card choices</>} />
     </Routes>
   )
 }
