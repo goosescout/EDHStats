@@ -86,3 +86,10 @@ export const header52 = {
   fontStyle: "normal",
   lineHeight: "normal",
 }
+
+export const header104 = {
+  fontFamily: family.header,
+  fontSize: "104px",
+  fontStyle: "normal",
+  lineHeight: "normal",
+}

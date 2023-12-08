@@ -43,7 +43,7 @@ export default function Footer() {
           </a>
           .
         </Links>
-        <LoadTime>Page loaded in {loadTime} seconds.</LoadTime>
+        <LoadTime>Page loaded in {loadTime} sec</LoadTime>
 
         <Contacts>
           <p>Michael Gurevich © 2023</p>

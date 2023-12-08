@@ -42,6 +42,9 @@ const NavWrapper = styled.nav`
 
   width: 100%;
   height: 74px;
+
+  position: fixed;
+  z-index: 100;
 `
 
 const Content = styled.div`
