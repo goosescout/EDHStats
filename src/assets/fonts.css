@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: SF-Pro-Display-Medium;
+  src: url(./fonts/SF-Pro-Display_Medium.ttf);
+}
+
+@font-face {
   font-family: Outfit-Light;
   src: url(./fonts/Outfit-Light.ttf);
 }
