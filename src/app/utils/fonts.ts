@@ -13,6 +13,5 @@ export const header28 = {
   fontFamily: family.header,
   fontSize: "28px",
   fontStyle: "normal",
-  fontWeight: 700,
   lineHeight: "normal",
 }

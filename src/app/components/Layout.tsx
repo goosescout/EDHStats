@@ -18,4 +18,7 @@ export default function Layout({ children }: ILayoutProps) {
   )
 }
 
-const PageWrapper = styled.div``
+const PageWrapper = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+`

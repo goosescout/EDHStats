@@ -22,24 +22,31 @@ const links: ILinkDetails[] = [
 
 export default function Navbar() {
   return (
-    <Wrapper>
-      <HomeLink />
-      {links.map(({ text, to }) => (
-        <NavbarLink key={text} to={to}>
-          {text}
-        </NavbarLink>
-      ))}
-    </Wrapper>
+    <NavWrapper>
+      <Wrapper>
+        <HomeLink />
+        {links.map(({ text, to }) => (
+          <NavbarLink key={text} to={to}>
+            {text}
+          </NavbarLink>
+        ))}
+      </Wrapper>
+    </NavWrapper>
   )
 }
 
-const Wrapper = styled.div`
+const NavWrapper = styled.nav`
   background: rgba(${colorsRGB.white}, 0.75);
   box-shadow: 0px 8px 20px 0px rgba(${colorsRGB.black}, 0.15);
   backdrop-filter: blur(16px);
 
   width: 100%;
   height: 74px;
+`
+
+const Wrapper = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 12px 24px;
   box-sizing: border-box;
 
