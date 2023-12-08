@@ -32,3 +32,8 @@
   font-family: Outfit-Bold;
   src: url(./fonts/Outfit-Bold.ttf);
 }
+
+@font-face {
+  font-family: FiraCode;
+  src: url(./fonts/FiraCode-Medium.ttf);
+}

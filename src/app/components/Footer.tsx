@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 import Separator from "@/components/Separator"
-import colors, { colorsRGB } from "@/utils/colors"
+import colors, { basicTransition, colorsRGB } from "@/utils/colors"
 import { text14, text14Medium } from "@/utils/fonts"
 import Discord from "~/assets/icons/Discord"
 import Github from "~/assets/icons/Github"
@@ -105,6 +105,11 @@ const Links = styled.p`
   > a {
     color: ${colors.purple};
     text-decoration: underline;
+    transition: color ${basicTransition};
+
+    &:hover {
+      color: ${colors.magenta};
+    }
   }
 `
 

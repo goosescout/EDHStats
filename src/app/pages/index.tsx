@@ -1,5 +1,6 @@
 import { RouteObject } from "react-router-dom"
 
+import Commanders from "@/pages/Commanders"
 import NotFound from "@/pages/NotFound"
 
 const routes: RouteObject[] = [
@@ -9,11 +10,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/commanders",
-    Component: () => <>Commanders</>,
-  },
-  {
-    path: "/commanders/test",
-    Component: () => <>Test 2</>,
+    Component: Commanders,
   },
   {
     path: "/card-choices",

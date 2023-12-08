@@ -14,6 +14,17 @@ module.exports = {
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh", "react", "@typescript-eslint", "import"],
+  overrides: [
+    {
+      "files": ["src/app/store/slices/**/*.ts", "src/app/store/api/**/*.ts"],
+      "rules": {
+        "no-param-reassign": [
+          "warn",
+          { "props": true, "ignorePropertyModificationsFor": ["state"] }
+        ]
+      }
+    }
+  ],
   rules: {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",

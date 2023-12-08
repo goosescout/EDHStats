@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import { colorsRGB } from "@/utils/colors"
 
-const Page = styled.div`
+const Page = styled.main`
   padding: 32px;
   margin: 0 20px;
   border-radius: 24px;

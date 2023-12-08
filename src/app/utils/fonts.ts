@@ -8,6 +8,7 @@ const family = {
   medium: "Outfit-Medium, Tahoma, sans-serif",
   semiBold: "Outfit-SemiBold, Tahoma, sans-serif",
   bold: "Outfit-Bold, Tahoma, sans-serif",
+  code: "FiraCode, monospace",
 }
 
 export const text14 = {
@@ -52,6 +53,13 @@ export const header16Medium = {
   lineHeight: "normal",
 }
 
+export const header20Medium = {
+  fontFamily: family.headerMedium,
+  fontSize: "20px",
+  fontStyle: "normal",
+  lineHeight: "normal",
+}
+
 export const header20 = {
   fontFamily: family.header,
   fontSize: "20px",
@@ -90,6 +98,13 @@ export const header52 = {
 export const header104 = {
   fontFamily: family.header,
   fontSize: "104px",
+  fontStyle: "normal",
+  lineHeight: "normal",
+}
+
+export const code24 = {
+  fontFamily: family.code,
+  fontSize: "24px",
   fontStyle: "normal",
   lineHeight: "normal",
 }

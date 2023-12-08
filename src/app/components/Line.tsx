@@ -20,6 +20,7 @@ const Line = styled.hr<ILineProps>`
   margin-right: 0px;
 
   border: none;
+  border-radius: 1px;
 `
 
 export default Line
