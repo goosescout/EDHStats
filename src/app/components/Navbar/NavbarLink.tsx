@@ -14,11 +14,11 @@ const NavbarLink = styled(NavLink)`
   transition: color ${basicTransition};
 
   &:hover {
-    color: ${colors.lightPurple};
+    color: ${colors.purple};
   }
 
   &.active {
-    color: ${colors.lightPurple};
+    color: ${colors.purple};
   }
 `
 

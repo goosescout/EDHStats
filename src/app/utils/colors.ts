@@ -10,7 +10,7 @@ const colors = {
   cyan: "#A5EEFF",
   magenta: "#BA2FF5",
   darkPurple: "#5E40C1",
-  lightPurple: "#9400FF",
+  purple: "#9400FF",
   lavander: "#DECBFF",
 }
 
@@ -26,7 +26,7 @@ export const colorsRGB = {
   cyan: "165, 238, 255",
   magenta: "186, 47, 245",
   darkPurple: "94, 64, 193",
-  lightPurple: "148, 0, 255",
+  purple: "148, 0, 255",
   lavander: "222, 203, 255",
 }
 

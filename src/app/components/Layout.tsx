@@ -2,6 +2,7 @@ import React from "react"
 
 import styled from "styled-components"
 
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 
 interface ILayoutProps {
@@ -14,6 +15,8 @@ export default function Layout({ children }: ILayoutProps) {
       <Navbar />
 
       <PageWrapper>{children}</PageWrapper>
+
+      <Footer />
     </>
   )
 }
@@ -21,4 +24,5 @@ export default function Layout({ children }: ILayoutProps) {
 const PageWrapper = styled.div`
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 `

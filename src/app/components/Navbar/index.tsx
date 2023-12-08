@@ -23,14 +23,14 @@ const links: ILinkDetails[] = [
 export default function Navbar() {
   return (
     <NavWrapper>
-      <Wrapper>
+      <Content>
         <HomeLink />
         {links.map(({ text, to }) => (
           <NavbarLink key={text} to={to}>
             {text}
           </NavbarLink>
         ))}
-      </Wrapper>
+      </Content>
     </NavWrapper>
   )
 }
@@ -44,7 +44,7 @@ const NavWrapper = styled.nav`
   height: 74px;
 `
 
-const Wrapper = styled.div`
+const Content = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 12px 24px;
