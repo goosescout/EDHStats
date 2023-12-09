@@ -12,6 +12,9 @@ const colors = {
   darkPurple: "#5E40C1",
   purple: "#9400FF",
   lavander: "#DECBFF",
+
+  green: "#07B738",
+  red: "#F22727",
 }
 
 export const colorsRGB = {

@@ -18,6 +18,7 @@
     "react-helmet-async": "^2.0.3",
     "react-redux": "^9.0.0",
     "react-router-dom": "^6.20.1",
+    "react-viewport-list": "^7.1.2",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
