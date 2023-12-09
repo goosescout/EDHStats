@@ -47,7 +47,7 @@ export default function ManaFilter() {
       {manaSymbols.map(symbol => (
         <button
           key={symbol}
-          data-active={mana.includes(symbol)}
+          data-active={currentMana.includes(symbol)}
           onClick={getManaToggle(symbol)}
         >
           <ManaSymbol symbol={symbol} size={40} />
