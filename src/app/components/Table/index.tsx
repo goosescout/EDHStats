@@ -29,7 +29,12 @@ export default function Table({
       {showHeader && (
         <Header $columns={columns}>
           {columns.map(({ name, sort }) => (
-            <SortOrderSelector key={name} state={sort} name={name} />
+            <SortOrderSelector
+              key={name}
+              state={sort}
+              name={name}
+              onClick={() => {}}
+            />
           ))}
         </Header>
       )}
@@ -75,6 +80,10 @@ const Header = styled.div<{ $columns: IColumn[] }>`
 
   ${header12Medium};
   color: ${colors.black};
+
+  > span {
+    opacity: 0.75;
+  }
 `
 
 const Row = styled.div<{ $columns: IColumn[] }>`
