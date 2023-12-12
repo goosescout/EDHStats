@@ -30,7 +30,7 @@ export default function Winrate() {
   const debouncedRight = useDebounce(currentRight, DEBOUNCE_DELAY)
 
   useEffect(() => {
-    dispatch(setWinrate([Number(debouncedLeft), Number(debouncedRight)]))
+    dispatch(setWinrate([Number(debouncedLeft), Number(debouncedRight || 100)]))
   }, [debouncedLeft, debouncedRight, dispatch])
 
   useEffect(() => {
@@ -44,8 +44,8 @@ export default function Winrate() {
       onChange={handleChange}
       left={currentLeft}
       right={currentRight}
-      leftPlaceholder="0"
-      rightPlaceholder="0"
+      leftPlaceholder="0%"
+      rightPlaceholder="100%"
     />
   )
 }
