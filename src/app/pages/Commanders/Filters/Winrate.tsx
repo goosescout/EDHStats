@@ -10,6 +10,8 @@ export default function Winrate() {
   const dispatch = useAppDispatch()
 
   const [left, right] = useAppSelector(({ filters }) => filters.winrate)
+  const text = useAppSelector(({ common }) => common.media)
+  console.log(text)
 
   const [currentLeft, setCurrentLeft] = useState(String(left))
   const [currentRight, setCurrentRight] = useState(String(right))
