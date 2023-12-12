@@ -7,7 +7,7 @@ interface IManaRowProps {
   children: string
 }
 
-export default function ManaRow({ children: mana }: IManaRowProps) {
+export default function ManaContainer({ children: mana }: IManaRowProps) {
   return (
     <Wrapper>
       {mana.split("").map(symbol => (

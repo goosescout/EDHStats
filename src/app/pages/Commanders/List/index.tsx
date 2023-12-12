@@ -2,8 +2,10 @@ import { useMemo } from "react"
 
 import styled from "styled-components"
 
+import Separator from "@/components/Separator"
 import Table from "@/components/Table"
-import ManaRow from "@/pages/Commanders/List/ManaRow"
+import ManaContainer from "@/pages/Commanders/List/ManaContainer"
+import Row from "@/pages/Commanders/List/Row"
 import colors from "@/utils/colors"
 
 const columns: {
@@ -59,38 +61,63 @@ export default function List() {
       ].map((commander, index) => {
         const winrate = Number((Math.random() * 100).toFixed(2))
 
-        return [
-          <span key={`${columns[0].name}_${index}`}>{index + 1}</span>,
-          <NameColumn key={`${columns[1].name}_${index}`}>
-            {commander}
-          </NameColumn>,
-          <ManaRow key={`${columns[2].name}_${index}`}>
-            {getRandomManaSymbols()}
-          </ManaRow>,
-          <WinrateColumn
-            key={`${columns[3].name}_${index}`}
-            data-positive={winrate > AVG_WINRATE}
-          >
-            {winrate}%
-          </WinrateColumn>,
-          <span key={`${columns[4].name}_${index}`}>
-            {(Math.random() * 1000).toFixed(0)}
-          </span>,
-          <span key={`${columns[5].name}_${index}`}>
-            {(Math.random() * 100).toFixed(0)}
-          </span>,
-          <span key={`${columns[6].name}_${index}`}>
-            {(Math.random() * 1000).toFixed(0)}
-          </span>,
-          <span key={`${columns[7].name}_${index}`}>
-            ${(Math.random() * 1000).toFixed(2)}
-          </span>,
-        ]
+        return (
+          <Row $columns={columns} key={index}>
+            <span key={`${columns[0].name}_${index}`}>{index + 1}</span>
+            <WithTableDivider>
+              <NameColumn key={`${columns[1].name}_${index}`}>
+                {commander}
+              </NameColumn>
+            </WithTableDivider>
+            <WithTableDivider>
+              <ManaContainer key={`${columns[2].name}_${index}`}>
+                {getRandomManaSymbols()}
+              </ManaContainer>
+            </WithTableDivider>
+            <WithTableDivider>
+              <WinrateColumn
+                key={`${columns[3].name}_${index}`}
+                data-positive={winrate > AVG_WINRATE}
+              >
+                {winrate}%
+              </WinrateColumn>
+            </WithTableDivider>
+            <WithTableDivider>
+              <span key={`${columns[4].name}_${index}`}>
+                {(Math.random() * 1000).toFixed(0)}
+              </span>
+            </WithTableDivider>
+            <WithTableDivider>
+              <span key={`${columns[5].name}_${index}`}>
+                {(Math.random() * 100).toFixed(0)}
+              </span>
+            </WithTableDivider>
+            <WithTableDivider>
+              <span key={`${columns[6].name}_${index}`}>
+                {(Math.random() * 1000).toFixed(0)}
+              </span>
+            </WithTableDivider>
+            <WithTableDivider>
+              <span key={`${columns[7].name}_${index}`}>
+                ${(Math.random() * 1000).toFixed(2)}
+              </span>
+            </WithTableDivider>
+          </Row>
+        )
       }),
     []
   )
 
-  return <Table columns={columns} rows={rows} />
+  return <Table columns={columns}>{rows}</Table>
+}
+
+function WithTableDivider({ children }: { children: React.ReactNode }) {
+  return (
+    <SeparatorWrapper>
+      <Separator />
+      {children}
+    </SeparatorWrapper>
+  )
 }
 
 const NameColumn = styled.span`
@@ -109,5 +136,16 @@ const WinrateColumn = styled.span`
 
   &[data-positive="false"] {
     color: ${colors.red};
+  }
+`
+
+const SeparatorWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  > ${Separator} {
+    height: 32px;
+    align-self: unset;
   }
 `
