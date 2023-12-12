@@ -1,3 +1,6 @@
+import { useRef } from "react"
+
+import { ViewportList, ViewportListRef } from "react-viewport-list"
 import styled from "styled-components"
 
 import Separator from "@/components/Separator"
@@ -24,6 +27,8 @@ export default function Table({
   showHeader = true,
   className = "",
 }: ITableProps) {
+  const listRef = useRef<ViewportListRef>(null)
+
   return (
     <Wrapper className={className}>
       {showHeader && (
@@ -39,17 +44,21 @@ export default function Table({
         </Header>
       )}
 
-      {rows.map((row, index) => (
-        <Row key={index} $columns={columns}>
-          {row.map((node, nodeIndex) =>
-            nodeIndex === 0 ? (
-              node
-            ) : (
-              <WithTableDivider key={nodeIndex}>{node}</WithTableDivider>
-            )
+      <ListWrapper>
+        <ViewportList items={rows} itemMargin={10} overscan={25} ref={listRef}>
+          {(item, index) => (
+            <Row key={index} $columns={columns}>
+              {item.map((node, nodeIndex) =>
+                nodeIndex === 0 ? (
+                  node
+                ) : (
+                  <WithTableDivider key={nodeIndex}>{node}</WithTableDivider>
+                )
+              )}
+            </Row>
           )}
-        </Row>
-      ))}
+        </ViewportList>
+      </ListWrapper>
     </Wrapper>
   )
 }
@@ -63,11 +72,7 @@ function WithTableDivider({ children }: { children: React.ReactNode }) {
   )
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`
+const Wrapper = styled.div``
 
 const Header = styled.div<{ $columns: IColumn[] }>`
   display: grid;
@@ -84,6 +89,12 @@ const Header = styled.div<{ $columns: IColumn[] }>`
   > span {
     opacity: 0.75;
   }
+`
+
+const ListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `
 
 const Row = styled.div<{ $columns: IColumn[] }>`

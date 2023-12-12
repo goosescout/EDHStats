@@ -45,7 +45,18 @@ function getRandomManaSymbols() {
 export default function List() {
   const rows = useMemo(
     () =>
-      [...commanders, ...commanders, ...commanders].map((commander, index) => {
+      [
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+        ...commanders,
+      ].map((commander, index) => {
         const winrate = Number((Math.random() * 100).toFixed(2))
 
         return [
